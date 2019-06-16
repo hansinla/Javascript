@@ -1,0 +1,41 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script language="javascript" type="text/javascript">
+
+	function outputArray (array) {
+		for (var i = 0; i < array.length; i++) {
+			document.write(array[i] + "<br>");
+		}
+		document.write("###############<br>");
+	}
+
+	</script>
+</head>
+<body>
+
+
+<script language="javascript" type="text/javascript">
+	
+	var placesToVisit = ["Amsterdam", "London", "Parijs", "Tokio", "Djakarta"];
+	placesToVisit.push("Boise");
+
+	outputArray(placesToVisit);
+
+	placesToVisit = placesToVisit.slice(2);
+
+	outputArray(placesToVisit);
+
+	placesToVisit = placesToVisit.sort();
+
+	outputArray(placesToVisit);
+
+	
+
+
+</script>
+	
+</body>
+</html>

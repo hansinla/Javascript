@@ -1,0 +1,29 @@
+<!--
+API key:	AIzaSyCIBW_7z2tBu_YEbUtE6NROYNXrJt042Us
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCIBW_7z2tBu_YEbUtE6NROYNXrJt042Us">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+        var mapOptions = {
+          center: { lat: 34.19781336830163, lng: -118.13078158395876},
+          zoom: 15
+        };
+        var map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body>
+<div id="map-canvas"></div>
+  </body>
+</html>

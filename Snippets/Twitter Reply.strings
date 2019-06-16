@@ -1,0 +1,103 @@
+2014-11-18 23:07:25.184 TweetTest[1401:106976] {
+    contributors = "<null>";
+    coordinates = "<null>";
+    "created_at" = "Tue Nov 18 22:00:10 +0000 2014";
+    entities =     {
+        hashtags =         (
+        );
+        symbols =         (
+        );
+        urls =         (
+                        {
+                "display_url" = "ofa.bo/t1ec";
+                "expanded_url" = "http://ofa.bo/t1ec";
+                indices =                 (
+                    76,
+                    98
+                );
+                url = "http://t.co/rQllVWztub";
+            }
+        );
+        "user_mentions" =         (
+        );
+    };
+    "favorite_count" = 614;
+    favorited = 0;
+    geo = "<null>";
+    id = 534828436397621248;
+    "id_str" = 534828436397621248;
+    "in_reply_to_screen_name" = "<null>";
+    "in_reply_to_status_id" = "<null>";
+    "in_reply_to_status_id_str" = "<null>";
+    "in_reply_to_user_id" = "<null>";
+    "in_reply_to_user_id_str" = "<null>";
+    lang = en;
+    place = "<null>";
+    "possibly_sensitive" = 0;
+    "retweet_count" = 359;
+    retweeted = 0;
+    source = "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>";
+    text = "Heath care open enrollment is here again. Find a plan that's right for you. http://t.co/rQllVWztub";
+    truncated = 0;
+    user =     {
+        "contributors_enabled" = 0;
+        "created_at" = "Mon Mar 05 22:08:25 +0000 2007";
+        "default_profile" = 0;
+        "default_profile_image" = 0;
+        description = "This account is run by Organizing for Action staff. Tweets from the President are signed -bo.";
+        entities =         {
+            description =             {
+                urls =                 (
+                );
+            };
+            url =             {
+                urls =                 (
+                                        {
+                        "display_url" = "barackobama.com";
+                        "expanded_url" = "http://www.barackobama.com";
+                        indices =                         (
+                            0,
+                            22
+                        );
+                        url = "http://t.co/O5Woad92z1";
+                    }
+                );
+            };
+        };
+        "favourites_count" = 8;
+        "follow_request_sent" = "<null>";
+        "followers_count" = 49889230;
+        following = "<null>";
+        "friends_count" = 646616;
+        "geo_enabled" = 0;
+        id = 813286;
+        "id_str" = 813286;
+        "is_translation_enabled" = 1;
+        "is_translator" = 0;
+        lang = en;
+        "listed_count" = 210355;
+        location = "Washington, DC";
+        name = "Barack Obama";
+        notifications = "<null>";
+        "profile_background_color" = 77B0DC;
+        "profile_background_image_url" = "http://pbs.twimg.com/profile_background_images/451819093436268544/kLbRvwBg.png";
+        "profile_background_image_url_https" = "https://pbs.twimg.com/profile_background_images/451819093436268544/kLbRvwBg.png";
+        "profile_background_tile" = 0;
+        "profile_banner_url" = "https://pbs.twimg.com/profile_banners/813286/1415570989";
+        "profile_image_url" = "http://pbs.twimg.com/profile_images/451007105391022080/iu1f7brY_normal.png";
+        "profile_image_url_https" = "https://pbs.twimg.com/profile_images/451007105391022080/iu1f7brY_normal.png";
+        "profile_link_color" = 2574AD;
+        "profile_location" = "<null>";
+        "profile_sidebar_border_color" = FFFFFF;
+        "profile_sidebar_fill_color" = C2E0F6;
+        "profile_text_color" = 333333;
+        "profile_use_background_image" = 1;
+        protected = 0;
+        "screen_name" = BarackObama;
+        "statuses_count" = 12705;
+        "time_zone" = "Eastern Time (US & Canada)";
+        url = "http://t.co/O5Woad92z1";
+        "utc_offset" = "-18000";
+        verified = 1;
+    };
+}

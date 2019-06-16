@@ -1,0 +1,19 @@
+img
+{
+    border: none;
+}
+.caption
+{
+    font-family: Arial;
+    font-size: .75em;
+    color: #000066;
+}
+a:link, a:visited
+{
+    text-decoration: none;
+    color: #660000;
+}
+a:hover
+{
+    text-decoration: underline;
+}

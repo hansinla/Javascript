@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+	<title>Weather Scraper</title>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    
+    <link href="css/styles.css" rel="stylesheet">
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">			
+			<div class="col-md-6 col-md-offset-3">
+				<h1 id="header">Weather Scraper</h1>
+				<div class="centered well">
+					<h3>Find the weather in your favorite city</h3>
+					<form class="form-inline">
+						<div class="form-group">
+							<input id="city" type="text" class="form-control" placeholder="Amsterdam" value=""/>
+						</div>
+					</form>
+					<button class="btn btn-success">Get Weather</button>
+				</div>
+				<p id="forecast"></p>
+			</div>
+		</div>
+	</div>
+
+<!--
+<?php
+	
+
+?>
+-->
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="scraper.php"></script>
+
+<script>
+	$('button').on('click', function(){
+		$('#forecast').addClass("well");
+		var location = "";
+		if ($('input').val() == "") {
+			$('#forecast').text("No city entered, retrieving the weather in Amsterdam for you.");
+			location = "Amsterdam";
+		} else {
+			$('#forecast').text("Retrieving the weather in "+ $('input').val()+" for you.");
+			location = $('input').val();
+		}
+		$.ajax({
+			url: "scraper.php",
+			data: {location: location},
+			success: function(result){
+				if (result == 0) {
+					result = "Failed to find the weather data for "+location+", please try again!";
+				}
+				$('#forecast').html(result);
+			}			
+		});
+	});
+</script>
+
+</body>
+</html>

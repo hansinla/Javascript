@@ -1,0 +1,34 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script language="javascript">
+
+	function writeToScreen (argument) {
+		for (var i = 0; i < argument.length; i++) {
+		document.write(i + " : " + argument.charAt(i) + "<br>");
+	};
+	}
+
+	</script>
+</head>
+<body>
+
+<script language="javascript">
+	var phrase = "If you're strong enough, there are no precedents";
+
+	document.write(phrase + "<br>");
+	//document.write(phrase.length + "<br>");
+
+	
+	//writeToScreen (phrase);
+
+	phrase = phrase.replace("you're", "we're");
+
+	document.write(phrase + "<br>");
+
+
+</script>
+	
+</body>
+</html>

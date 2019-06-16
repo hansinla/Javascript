@@ -1,0 +1,51 @@
+<!--
+API key:	AIzaSyCIBW_7z2tBu_YEbUtE6NROYNXrJt042Us
+lat: 34.19781336830163, lng: -118.13078158395876
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta  name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+
+    <style type="text/css">
+      body {
+        font-family: Helvetica;
+        font-size: 1.3em;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+<body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <script>
+    
+        $.ajax( {
+          type: "GET",
+          url: "https://maps.googleapis.com/maps/api/geocode/xml?address=902+Wapello+Street,+Altadena,+CA&key=AIzaSyCIBW_7z2tBu_YEbUtE6NROYNXrJt042Us",
+          dataType: "xml",
+          success: processXML
+        });
+
+        function processXML(xml) {
+          
+          $(xml).find("address_component").each(function(){
+            if ($(this).find("type").text() == "postal_code") {
+              $("#location").text("My zipcode: "+$(this).find("long_name").text());
+            }
+          });
+        }
+
+    </script>
+
+    <p id="location">TEST</p>
+    </body>
+</html>
+
+
+ 
+
+

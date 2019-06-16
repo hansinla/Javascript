@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>animation test</title>
+	<style type="text/css">
+
+	#box1{
+		background-color: #FF850A;
+		height: 17px;
+		top: 10px;
+		float: left;
+	}
+
+	#box2{
+		background-color: #000000;
+		height: 17px;
+		top: 10px;
+		float: right;
+	}
+
+	</style>
+</head>
+<body>
+	<p>
+		<div id="box1"></div><div id="box2"></div>
+	</p>
+
+	<script>
+
+		var barWidth = window.innerWidth;
+		var timerId, element;
+
+		element = document.getElementById("box1");
+		element2 = document.getElementById("box2");
+
+		element.style.width =  barWidth;
+		element2.style.width =  0;
+
+
+		function animateBar(){
+			timerId = setInterval(paintBar, 1);
+		}
+
+		function paintBar () {
+			barWidth -= 2;
+			if (barWidth <= 0){
+				 clearInterval(timerId);
+				}
+
+			//element.innerHTML = barWidth;
+			element.style.width =  barWidth + "px";
+			element2.style.left = barWidth + "px";
+			element2.style.width =  (window.innerWidth - barWidth - 16 ) + "px";
+
+		}
+
+		
+
+		animateBar();
+	</script>
+	<div></div>
+</body>
+</html>

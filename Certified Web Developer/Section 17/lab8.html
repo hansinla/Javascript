@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script language="javascript">
+
+	var vowels = ['a','e', 'i', 'o', 'u' ];
+
+	function replaceVowels (str) {
+		var result ="";
+		for (var i = 0; i < str.length; i++) {
+			if (vowels.indexOf(str[i]) >= 0){
+				result += "X";
+			} else {
+				result += str[i];
+			}
+		}
+		return result;
+	}
+
+	</script>
+</head>
+<body>
+
+<script language="javascript">
+	var poem = "";
+
+	poem += "With Rue My Heart Is Laden" + "<br>";
+	poem += "For Golden Friends I Had" + "<br>";
+	poem += "For Many a Rose-Lipped Maiden" + "<br>";
+	poem += "And Many a Light-Foot Lad" + "<br>";
+
+	poem += "<br>";
+
+	poem += "By Brooks To Broad For Leaping" + "<br>";
+	poem += "The Light Foot Boys are Laid" + "<br>";
+	poem += "The Rose-Lipped Girls are Sleeping" + "<br>";
+	poem += "In Fields Where Roses Fade" + "<br>";
+
+	document.write(poem);
+	
+	document.write("<br>-------------------<br>");
+	document.write(replaceVowels (poem));
+
+	document.write("<br>-------------------<br>");
+
+	var sportStr =  "tennis,ice hockey,baseball,basketball,football,soccer,bowling";
+	var sportArr = sportStr.split(',');
+	sportArr = sportArr.sort();
+
+	for (var i = 0; i < sportArr.length; i++) {
+		document.write(sportArr[i] + "<br>");
+	}
+
+</script>
+	
+</body>
+</html>

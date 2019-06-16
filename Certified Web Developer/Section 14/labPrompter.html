@@ -1,0 +1,35 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		p{
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+
+
+	<script language="javascript" text="text/javascript">
+
+		var intRate = parseFloat(prompt("Enter interest rate:", ".005"));
+		var invested = parseFloat(prompt("Enter money invested:", "1000"));
+		var term = parseInt(prompt("Enter term:", "24"));
+
+		var totalMoney = invested, interest;
+
+		for (var i = 1; i < term + 1; i++) {
+			interest = totalMoney * intRate;
+			totalMoney += interest;
+			document.write("<p>Month: " + i + "</p>");
+			document.write("Interest: " + interest.toFixed(2) + "<br>");
+			document.write("Total:" + totalMoney.toFixed(2) + "<br>");
+
+		}
+
+
+	</script>
+
+</body>
+</html>

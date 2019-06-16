@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML 5 Forms</title>
+</head>
+	<body>
+		<form action="#" method="post">
+			<table>
+			<tr>
+				<td>First Name:</td>
+				<td><input type="text" name="first" id-"first"/></td>
+			</tr>
+			<tr>
+				<td>Last Name:</td>
+				<td><input type="text" name="last" id-"last"/></td>
+			</tr>		
+				<tr>
+					<td valign="top">Gender:</td>
+					<td>
+						<input type="radio" value="male" name="gender" id="">Male
+						<input type="radio" value="female" name="gender" id="">Female
+					</td>
+				</tr>
+				<br/>
+				<tr>
+					<td valign="top">Bands you like:</td>
+					<td>
+						<input type="checkbox" value="journey" name="bands" id="">Journey<br/>
+						<input type="checkbox" value="reo" name="bands" id="">Reo Speedwagon<br/>
+						<input type="checkbox" value="survivor" name="bands" id="">Survivor<br/>
+						<input type="checkbox" value="heart" name="bands" id="">Heart<br/>
+					</td>
+				</tr>
+			</table>
+		</form>
+
+		<form action="#" method="post">
+			Color:
+			<input type="color" name="color"/> <!-- doesn't work in Safari -->
+			<br/>
+			Date of Birth:
+			<input type="date" name="dob" />	<!-- doesn't work in Safari -->
+			<br/>
+			Time of Appointment:
+			<input type="time" name="time" />	<!-- doesn't work in Safari -->
+			<br/>
+			Email:
+			<input type="email" name="email" />	<!-- doesn't work in Safari -->
+			<br/>
+			Age:
+			<input type="number" name="age" min="0" max="115"/>
+			<br/>
+			<input type="submit" value="Send Info"/>
+		</form>
+
+		<br/>
+		<form action="#" method="post">
+		Choose your favorite type of food:
+		<br/>
+			<select name="food">
+				<option value="continental">Continental</option>
+				<option value="chinese">Chinese</option>
+				<option value="thai">Thai</option>
+				
+			</select>
+
+		</form>
+
+	</body>
+</html>

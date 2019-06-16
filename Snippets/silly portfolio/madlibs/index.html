@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="This is a simple webpage that emulates the Mad Libs game and uses Javascript and jQuery. ">
+    <meta name="author" content="Hans van Riet, Television Director, Editor and Front-End Developer">
+    <!--  ----------------------------------------------------- -->
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="prompt"></div>
+        <button>Next</button>
+    <script>
+        // List of prompts for the user
+        var prompts = [
+            'Type your name',
+            'Type an adjective',
+            'Type a noun'
+           ];
+
+        var answers=[];
+        // Keep track of current prompt we're on
+        var currentPrompt = 0;
+
+        // A function that will call the next prompt
+        var nextPrompt = function() {
+          //if there's no answer in the form
+          if (currentPrompt !== 0){
+            answers.push($('input').val());
+          }
+            // if there is a next prompt
+            if (currentPrompt < prompts.length) {
+                // put first prompt in all html elements with class 
+                $('.prompt').html(prompts[currentPrompt] +'<br><input type="text">');
+                // move the next prompt into variable currentPrompt 
+                currentPrompt = currentPrompt + 1;
+            }
+            //or else if we're at the end of the array
+            else {
+                // put a new message into the html.
+                showFinal();
+            }
+        };
+
+        //puts user answers into HTML
+        var showFinal = function() {
+          $('.prompt').html('This is the story of <span class="fill">'+answers[0]+'</span> and the <span class="fill">'+answers[1]+'</span> <span class="fill">'+answers[2]+'</span>.');
+          $('button').hide();
+        };
+
+        // run nextPrompt function when button is clicked
+        $('button').click(function() {
+            nextPrompt();
+        });
+
+        // Show the first prompt as soon as js loads
+        nextPrompt();
+    </script>
+
+</body>

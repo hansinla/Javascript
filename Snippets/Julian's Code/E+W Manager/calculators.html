@@ -1,0 +1,369 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>E&W Manager</title>
+
+    <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+ <link href="stylesheets/my-stylesheet.css" rel="stylesheet">
+<!-- Latest compiled and minified JavaScript -->
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+ <script src="Calculator.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400;300' rel='stylesheet' type='text/css'>
+    <link href='stylesheets/style.css' rel='stylesheet'>
+ 
+  </head>
+
+  
+  
+  <body class="body">
+    
+   <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id))
+    {js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}
+    (document,"script","twitter-wjs");</script>
+<br>
+
+<div class="menu">
+      
+      <!-- Menu icon -->
+      <div class="icon-close">
+          <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png" alt="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
+      </div>
+
+      <!-- Menu -->
+      <ul>
+         <li><a href="index.html">Home</a></li>
+         <li><a href="CALCULATORS.html">CALCULATORS</a></li>
+         <li><a href="contact.php">CONTACT</a></li>
+         <li><a href="http://ewmanagerblog.blogspot.com">BLOG</a></li>
+      </ul>
+    </div>
+
+      <div class="icon-menu">
+        <i class="fa fa-bars"></i>
+        Menu
+      </div>
+
+
+      <div class="container">
+           <div id="fb-root"></div>
+
+
+
+<div class="fb-like-box" data-href="https://www.facebook.com/EWManager" data-width="10" data-height="10" 
+     data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
+        
+     <a href="https://twitter.com/EWManager" class="twitter-follow-button" data-show-count="true" 
+        data-lang="en" data-width="350px" data-height="100px">Follow @twitter</a>
+        
+
+
+
+      
+      <!-- Jumbotron -->
+      <div class="jumbotron bg2">
+          <br>
+          <br>
+          <br>
+            <br>
+          <br>
+          <br>
+          <br>
+          <br>
+      </div>
+      
+      <br>
+      <br>
+      
+       <div class="col-lg-6">
+       
+       <h1>Water Calculator</h1>
+       <h4>Rates from Pasadena Water and Power</h4>
+     
+       <table style="width:300px">
+<tr>
+  <th>Water/Water Source</th>
+  <th>Amount in Minutes/Times</th>		
+  <th>Gallons Used</th>
+  <th>Cost</th>
+  </tr>
+
+<tr>
+  <td>Shower Time</td>
+  <td><input type="text" id="shower" onchange="calculate();"></td>		
+  <td><div id="gallons1"></div></td>
+  <td><div id="cost1"></div></td>
+</tr>
+
+<tr>
+  <td>Number of Baths</td>
+  <td><input type="text" id="bath" onchange="calculate2();"></td>		
+  <td><div id="gallons2"></div></td>
+<td><div id="cost2"></div></td>
+</tr>
+
+
+<tr>
+<td>
+Time Brushing Teeth 
+</td>
+<td>
+<input type="text" id="brushingteeth" onchange="calculate3();">
+</td>
+<td>
+<div id="gallons3"></div>
+</td>
+<td>
+<div id="cost3"></div>
+</td>
+</tr>
+
+<tr>
+<td>
+Number of Toilet Flushes
+</td>
+<td>
+<input type="text" id="toiletflush" onchange="calculate4();">
+</td>
+<td>
+<div id="gallons4"></div>
+</td>
+<td>
+<div id="cost4"></div>
+</td>
+</tr>
+
+<tr>
+<td>
+Number of Washing Machine Uses
+</td>
+<td>
+<input type="text" id="washingmachine" onchange="calculate5();">
+</td>
+<td>
+<div id="gallons5"></div>
+</td>
+<td>
+<div id="cost5"></div>
+</td>
+</tr>
+<tr>
+<td>
+ Number of Dishwasher Uses
+</td>
+<td>
+<input type="text" id="dishwasher" onchange="calculate6();">
+</td>
+<td>
+<div id="gallons6"></div>
+</td>
+<td>
+<div id="cost6"></div>
+</td>
+</tr>
+
+<tr>
+<td>
+Sprinkler Time 
+</td>
+<td>
+<input type="text" id="sprinkler" onchange="calculate7();">
+</td>
+<td>
+<div id="gallons7"></div>
+</td>
+<td>
+<div id="cost7"></div>
+</td>
+</tr>
+
+<tr>
+<td><b>Total Gallons:</b></td>
+<td><div id="totalGallons"></div></td>
+</tr>
+
+<tr>
+<td>
+<b>Total Cost:</b>
+</td>
+<td>
+<div id="totalCost"></div>
+</td>
+</tr>
+</table>
+         </div>
+      
+      
+      
+       <div class="col-lg-6">
+       <h1>Power Calculator - Per month </h1>
+       <br>
+       <h4>Rates from Pasadena Water and Power</h4>
+       
+      <table style="width:300px">
+<tr>
+  <th>Electricity/Power Source</th>
+  <th>Minutes of Usage Daily</th>		
+  <th>KiloWatt-Hours (Total)</th>
+  <th>Cost Monthly</th>
+  </tr>
+<tr>
+<tr>
+  <td>TV/Time</td>
+  <td><input type="text" id="tv" onchange="calculate8();"></td>		
+  <td><div id="watts1"></div></td>
+  <td><div id="mon1"></div></td>
+</tr>
+
+<tr>
+  <td>Computer Time</td>
+  <td><input type="text" id="computer" onchange="calculate9();"></td>		
+  <td><div id="watts2"></div></td>
+<td><div id="mon2"></div></td>
+</tr>
+
+
+<tr>
+<td>
+Microwave Time
+</td>
+<td>
+<input type="text" id="microwave" onchange="calculate10();">
+</td>
+<td>
+<div id="watts3"></div>
+</td>
+<td>
+<div id="mon3"></div>
+</td>
+</tr>
+
+<tr>
+<td>
+Refrigerator Time
+</td>
+<td>
+<input type="text" id="fridge" onchange="calculate11();">
+</td>
+<td>
+<div id="watts4"></div>
+</td>
+<td>
+<div id="mon4"></div>
+</td>
+</tr>
+
+<tr>
+<td>
+Toaster Time
+</td>
+<td>
+<input type="text" id="toaster" onchange="calculate12();">
+</td>
+<td>
+<div id="watts5"></div>
+</td>
+<td>
+<div id="mon5"></div>
+</td>
+</tr>
+
+
+<tr>
+<td><b>Total Watt-Hours:</b></td>
+<td><div id="totalWatts"></div></td>
+</tr>
+
+<tr>
+<td>
+<b>Total Cost:</b>
+</td>
+<td>
+<div id="totalCost2"></div>
+</td>
+</tr>
+</table>
+       </div>
+      <br>
+      <br>
+      <br>
+     <br>
+      <br>
+      <br><br>
+      <br>
+      <br><br>
+      <br>
+      <br><br>
+      <br>
+      <br>
+         <br>
+      <br>
+      <br>
+     <br>
+      <br>
+      <br><br>
+      <br>
+      <br><br>
+      <br>
+      <br><br>
+      <br>
+      <br>
+         <br>
+      <br>
+      <br>
+     <br>
+      <br>
+      <br><br>
+      <br>
+      <br><br>
+      <br>
+      <br><br>
+      <br>
+      <br>
+      <br><br>
+      <br>
+      <br>
+      
+      
+      <div class="container">  
+      <!-- Example row of columns -->
+     <div class="footer">
+        <p>&copy; App Academy 2014</p>
+            <p>Created by - Sevag Satamian, Sebastian Ojeda,and Julian Van Riet</p>
+      </div>
+
+    </div> <!-- /container -->
+     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+      </body>
+      <!-- Site footer -->
+      
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+</html>
+

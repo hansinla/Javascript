@@ -1,0 +1,33 @@
+html, body {
+    height: 100%;
+}
+
+.container {
+    background-image: url("../images/weather.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+#header {
+    text-align:  center !important;
+    font-size: 300% !important;
+    color: white;
+}
+
+.centered{
+    text-align: center;
+}
+
+button {
+    margin-top: 10px;
+    width: 100px;
+}
+
+#forecast{
+    color: gray;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.3em;
+}

@@ -1,0 +1,35 @@
+table {
+	border: 2px solid #000000;
+	border-collapse: collapse;
+	border-radius: 5px;
+	margin: 5px;
+	padding: 5px;
+	width: 50%;
+	font-family: Verdana;
+}
+
+td, th {
+	border: 1px solid #0000AA;
+	margin: 5px;
+	padding: 5px;
+}
+th {
+	background-color: blue;
+	color: white;
+	text-align: left;
+	font-size: 0.8em;
+	font-weight: bold;
+}
+
+td {
+	font-size: 0.7em;
+}
+
+.even {
+	background-color:rgb(200,200,200);
+}
+
+.odd {
+	background-color:rgb(230,230,230)
+}
+

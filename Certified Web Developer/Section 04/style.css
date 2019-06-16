@@ -1,0 +1,14 @@
+body{
+	font-family: Helvetica;
+}
+
+a:link, a:visited {
+	color: gray;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #BBBBBB;
+	text-decoration: none;
+}

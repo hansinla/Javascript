@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<script language="javascript" type="text/javascript">
+function validFirst()
+{
+	if (document.getElementById("first").value === null || document.getElementById("first").value == "") {
+		document.getElementById("firstError").innerHTML = "Required Field";
+		document.getElementById("first").style.backgroundColor = "red";
+	} else {
+		document.getElementById("first").style.backgroundColor = "white";
+		document.getElementById("firstError").innerHTML = "";
+	}
+
+	if (document.getElementById("first").value.length <= 2) {
+		document.getElementById("firstError").innerHTML = "Response too short";
+	} else {
+		document.getElementById("firstError").innerHTML = "";
+	}
+}
+function validLast()
+{
+	if (document.getElementById("last").value === null || document.getElementById("last").value == "") {
+		document.getElementById("lastError").innerHTML = "Required Field";
+		document.getElementById("last").style.backgroundColor = "red";
+	} else {
+		document.getElementById("last").style.backgroundColor = "white";
+		document.getElementById("lastError").innerHTML = "";
+	}
+    
+}
+function validEmail()
+{
+	if (document.getElementById("email").value === null || document.getElementById("email").value == "") {
+		document.getElementById("emailError").innerHTML = "Required Field";
+		document.getElementById("email").style.backgroundColor = "red";
+	} else {
+		document.getElementById("email").style.backgroundColor = "white";
+		document.getElementById("emailError").innerHTML = "";
+	}
+    
+}
+function validPhone()
+{
+	if (document.getElementById("phone").value === null || document.getElementById("phone").value == "") {
+		document.getElementById("phoneError").innerHTML = "Required Field";
+		document.getElementById("phone").style.backgroundColor = "red";
+	} else {
+		document.getElementById("phone").style.backgroundColor = "white";
+		document.getElementById("phoneError").innerHTML = "";
+	}
+    
+}
+</script>
+<head>
+    <title>Chapter 10 Lab</title>
+</head>
+<body>
+    <table>
+            <tr>
+                <td>First Name</td>
+                <td><input type="text" id="first" onblur="validFirst()"></td>
+                <td><span id="firstError"></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" id="last" onblur="validLast()"></td>
+                <td><span id="lastError"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" id="email" onblur="validEmail()"></td>
+                <td><span id="emailError"></td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td><input type="text" id="phone" onblur="validPhone()"></td>
+                <td><span id="phoneError"></td>
+            </tr>
+            <tr>
+                <td><input type="submit"/></td>
+                <td></td>
+                <td></td>
+</body>
+</html>

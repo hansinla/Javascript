@@ -1,0 +1,14 @@
+h2 {
+	font-family: Georgia;
+	font-size: 16pt;
+	color: rgb(215, 0, 0);
+	text-align: center;
+	text-transform: uppercase;
+}
+
+p {
+	font-family: Arial;
+	font-size: 0.8em;
+	color: #0000AB;
+	text-indent: 200px;
+}
