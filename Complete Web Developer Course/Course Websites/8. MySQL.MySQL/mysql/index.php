@@ -3,13 +3,13 @@
 	echo $_COOKIE["TESTCOOKIE"];
 
 	
-	$link = mysqli_connect("localhost", "hans", "QUe4AFeJTT6tNpx9", "exampledb");
+	$link = mysqli_connect("localhost", "hans", "MASKED", "exampledb");
 
 	if (mysqli_connect_error()) {
 		die( "Could not connect to database"); // die echo's but kills the process as well
 	}
 
-	// $query = "INSERT INTO `users` (`name`, `email`, `password`) VALUES('Julian', 'julianinla@me.com', 'maurits99')";
+	// $query = "INSERT INTO `users` (`name`, `email`, `password`) VALUES('Julian', 'julianinla@me.com', 'NEW_PASSWORD')";
 	
 	$query = "UPDATE `users` SET `email` = 'test@mac.com' WHERE `id`=2 LIMIT 1";
 	mysqli_query($link, $query);
