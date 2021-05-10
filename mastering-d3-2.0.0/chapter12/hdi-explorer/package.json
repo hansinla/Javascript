@@ -31,6 +31,7 @@
     "grunt-contrib-watch": "^0.6.1"
   },
   "dependencies": {
-    "grunt-s3": "~0.2.0-alpha.3"
-  }
+  "grunt": ">=1.3.0"
+}
+
 }
